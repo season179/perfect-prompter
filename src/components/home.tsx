@@ -1,6 +1,7 @@
 import React from "react";
 import PromptOptimizer from "./PromptOptimizer";
 import { Sparkles } from "lucide-react";
+import ApiKeyManager from "./ApiKeyManager";
 
 const Home = () => {
   // Mock function to simulate backend processing
@@ -39,25 +40,8 @@ const Home = () => {
                 Prompt Optimizer
               </span>
             </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Examples
-              </a>
+            <div className="flex items-center">
+              <ApiKeyManager />
             </div>
           </div>
         </div>
