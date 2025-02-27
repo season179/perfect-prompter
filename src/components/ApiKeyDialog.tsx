@@ -30,9 +30,9 @@ const ApiKeyDialog: React.FC<ApiKeyDialogProps> = ({ open, onOpenChange }) => {
       return;
     }
     
-    // Basic validation - OpenRouter API keys are typically longer
-    if (inputKey.length < 20) {
-      setError("This doesn't look like a valid API key");
+    // Basic validation - OpenRouter API keys typically start with sk-or-
+    if (!inputKey.trim().startsWith("sk-or-") || inputKey.length < 20) {
+      setError("This doesn't look like a valid OpenRouter API key. It should start with 'sk-or-'");
       return;
     }
     
@@ -52,7 +52,7 @@ const ApiKeyDialog: React.FC<ApiKeyDialogProps> = ({ open, onOpenChange }) => {
           </DialogTitle>
           <DialogDescription>
             Your API key is stored locally on your device and never sent to our servers.
-            You can get an API key from{" "}
+            You can get a free API key from{" "}
             <a
               href="https://openrouter.ai/keys"
               target="_blank"
@@ -68,7 +68,7 @@ const ApiKeyDialog: React.FC<ApiKeyDialogProps> = ({ open, onOpenChange }) => {
             <div className="grid gap-2">
               <Input
                 id="apiKey"
-                placeholder="sk-or-..."
+                placeholder="sk-or-v1-..."
                 value={inputKey}
                 onChange={(e) => {
                   setInputKey(e.target.value);
@@ -77,6 +77,9 @@ const ApiKeyDialog: React.FC<ApiKeyDialogProps> = ({ open, onOpenChange }) => {
                 className="w-full"
               />
               {error && <p className="text-sm text-red-500">{error}</p>}
+              <p className="text-xs text-gray-500">
+                This application uses OpenRouter to access AI models like Claude for prompt optimization.
+              </p>
             </div>
           </div>
           <DialogFooter>
