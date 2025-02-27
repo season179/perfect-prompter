@@ -28,9 +28,9 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-sm py-4">
+      <nav className="bg-white shadow-sm py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -64,13 +64,13 @@ const Home = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="bg-white py-12">
+      <div className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
               Enhance Your AI Prompts
             </h1>
-            <p className="mt-5 max-w-xl mx-auto text-xl text-gray-500">
+            <p className="mt-4 max-w-xl mx-auto text-xl text-gray-500">
               Get better results from AI systems with our prompt optimization
               tool. Simply enter your prompt and we'll help refine it for
               clarity and effectiveness.
@@ -80,12 +80,12 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-grow w-full flex justify-center px-4 sm:px-6 lg:px-8 pt-4">
         <PromptOptimizer onOptimizePrompt={handleOptimizePrompt} />
       </main>
 
       {/* Footer */}
-      <footer className="bg-white mt-12 py-8 border-t border-gray-200">
+      <footer className="bg-white py-8 border-t border-gray-200 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:flex md:items-center md:justify-between">
             <div className="flex justify-center md:justify-start space-x-6">

@@ -33,7 +33,7 @@ const PromptInput: React.FC<PromptInputProps> = ({
   };
 
   return (
-    <Card className="w-full max-w-3xl mx-auto bg-white shadow-md">
+    <Card className="w-full md:w-[600px] lg:w-[720px] bg-white shadow-md">
       <CardHeader>
         <CardTitle className="text-xl font-medium text-center text-gray-800">
           {title}

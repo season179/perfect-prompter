@@ -121,13 +121,13 @@ const PromptOptimizer: React.FC<PromptOptimizerProps> = ({
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 bg-gray-50 min-h-[700px] flex flex-col items-center justify-center space-y-8">
-      <header className="w-full text-center mb-4">
+    <div className="w-full mx-auto flex flex-col items-center justify-center space-y-4">
+      <header className="w-full text-center mb-2">
         <h1 className="text-3xl font-bold text-gray-800 flex items-center justify-center gap-2">
           <Sparkles className="h-6 w-6 text-blue-500" />
           Prompt Optimizer
         </h1>
-        <p className="text-gray-600 mt-2">
+        <p className="text-gray-600 mt-1">
           Refine your prompts for better AI responses
         </p>
       </header>
